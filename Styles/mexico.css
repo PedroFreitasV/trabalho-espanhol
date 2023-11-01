@@ -1,0 +1,186 @@
+/****************************** NAVEGAÇÃO *******************************/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.brand{
+    width: 94px;
+}
+nav{
+    background: rgba(18, 155, 18, 0.8)
+}
+nav div.container ul a{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+ul.navbar-nav li.nav-item a.nav-link{
+    color: rgb(255, 255, 255);
+    transition: .5s;
+    position:  relative !important;
+}
+ul.navbar-nav li.nav-item a::after{
+    content: " " !important;
+    width: 0% !important;
+    height: 2px !important;
+    background-color:rgb(255, 255, 255) !important;
+    position: absolute !important;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+ul.navbar-nav li.nav-item a:hover::after{
+    width: 100% !important;
+}
+.divisor{
+    width: 1px;
+    background-color: white;
+    margin: 12px 15px;
+}
+.fa-bars{
+    color: white;
+}
+
+/****************************** SEÇÃO 1 *******************************/
+
+#sct-1, html, body{
+    height: 100%;
+}
+#sct-1{
+    background-image: url(../backgrounds/mexico-city.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    color: white;
+}
+.digitando{
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 4px 6px 10px #000;
+}
+.digitando::after{
+    content: '|';
+    opacity: 1;
+    animation: pisca .5s infinite;
+}
+@keyframes inicializar{
+    from{
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, -60px, 0);
+    }
+}
+@keyframes pisca{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+/****************************** SEÇÃO 2 *******************************/
+
+#sct-2{
+    padding: 30px;
+}
+#sct-2 h2{
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/****************************** SEÇÃO 3 *******************************/
+
+#sct-3{
+    padding: 30px;
+    text-align: center;
+    background-image: url(../backgrounds/mexico\ \(2\).png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.informacoes{
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/****************************** FOOTER *******************************/
+
+footer{
+    background-color: #1d1c1c;
+    padding: 30px;
+    color: white;
+    text-align: center;
+}
+.mx-img{
+    border: 7px solid rgb(20, 148, 20);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+footer ul, .mx-img{
+    margin-bottom: 10px;
+}
+footer h5{
+    text-align: center;
+    border-top: 2px solid white;
+    margin-top: 10px;
+    padding-top: 20px;
+}
+footer h4{
+    padding-top: 10px;
+}
+
+/***************************** MEDIA *************************/
+/* Extra Small divices */
+@media(max-width: 575.98px){
+    #sct-1{
+        padding-top: 300px;
+    }
+    #sct-2{
+        text-align: center;
+    }
+}
+/* Small devices */
+@media(min-width: 576px) and (max-width: 567.98px){
+    #sct-1{
+        padding-top: 300px;
+    }
+    #sct-2{
+        text-align: center;
+    }
+}
+/* Medium devices*/
+@media(min-width: 568px) and (max-width: 991.98px){
+    #sct-1{
+        padding-top: 300px;
+    }
+    .mx{
+        text-align: center;
+    }
+}
+/* Large devices */
+@media(min-width: 992px) and (max-width: 1199.98px){
+    #sct-1{
+        padding-top: 300px;
+    }
+    .mx{
+        text-align: center;
+    }
+}
+/* Extra Large devices */
+@media(min-width: 1200px){
+    #sct-1{
+        padding-top: 300px;
+    }
+    .mx{
+        text-align: center;
+    }
+}

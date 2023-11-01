@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>México</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="description" content="Este é um trabalho escolar sobre o México">
+        <meta name="keywords" content="México, Mexico, mexico, dia dos mortos, dia de los muertos">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=7">
+        <link rel="stylesheet" href="./Styles/mexico.css">
+        <link rel="stylesheet" href="./Bootstrap/Bootstrap5/css/bootstrap.min.css">
+        <script src="https://kit.fontawesome.com/7650161678.js" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="./favicons/favicon.png" type="image/x-icon">
+        <script type="text/javascript" src="https://www.amcharts.com/lib/3/ammap.js"></script>
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/maps/js/mexicoLow.js"></script>
+
+		<!-- amCharts javascript code -->
+		<script type="text/javascript">
+			AmCharts.makeChart("map",{
+					"type": "map",
+					"pathToImages": "http://www.amcharts.com/lib/3/images/",
+					"addClassNames": true,
+					"fontSize": 15,
+					"color": "#000000",
+					"projection": "mercator",
+					"backgroundAlpha": 1,
+					"backgroundColor": "rgba(255,255,255,1)",
+					"dataProvider": {
+						"map": "mexicoLow",
+						"getAreasFromMap": true,
+						"images": [
+							{
+								"top": 40,
+								"left": 60,
+								"width": 80,
+								"height": 40,
+								"pixelMapperLogo": true,
+								"imageURL": "http://pixelmap.amcharts.com/static/img/logo-black.svg",
+								"url": "http://www.amcharts.com"
+							}
+						]
+					},
+					"balloon": {
+						"horizontalPadding": 15,
+						"borderAlpha": 0,
+						"borderThickness": 1,
+						"verticalPadding": 15
+					},
+					"areasSettings": {
+						"color": "rgba(49,158,217,1)",
+						"outlineColor": "rgba(255,255,255,1)",
+						"rollOverOutlineColor": "rgba(255,255,255,1)",
+						"rollOverBrightness": 20,
+						"selectedBrightness": 20,
+						"selectable": true,
+						"unlistedAreasAlpha": 0,
+						"unlistedAreasOutlineAlpha": 0
+					},
+					"imagesSettings": {
+						"alpha": 1,
+						"color": "rgba(49,158,217,1)",
+						"outlineAlpha": 0,
+						"rollOverOutlineAlpha": 0,
+						"outlineColor": "rgba(255,255,255,1)",
+						"rollOverBrightness": 20,
+						"selectedBrightness": 20,
+						"selectable": true
+					},
+					"linesSettings": {
+						"color": "rgba(49,158,217,1)",
+						"selectable": true,
+						"rollOverBrightness": 20,
+						"selectedBrightness": 20
+					},
+					"zoomControl": {
+						"zoomControlEnabled": true,
+						"homeButtonEnabled": false,
+						"panControlEnabled": false,
+						"right": 38,
+						"bottom": 30,
+						"minZoomLevel": 0.25,
+						"gridHeight": 100,
+						"gridAlpha": 0.1,
+						"gridBackgroundAlpha": 0,
+						"gridColor": "#FFFFFF",
+						"draggerAlpha": 1,
+						"buttonCornerRadius": 2
+					}
+				});
+		</script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md fixed-top">
+                <div class="container">
+                    <a href="index.html">
+                        <img src="./brands/logo-index.png" class="brand" alt="Logo">
+                    </a>
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-mexico">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="nav-index">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a href="index.html" class="nav-link">Menu</a></li>
+                            <li class="nav-item"><a href="mexico.html" class="nav-link">México</a></li>
+                            <li class="nav-item divisor"></li>
+                            <li class="nav-item"><a href="simbolos.html" class="nav-link">Símbolos</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section id="sct-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="digitando">Olá, seja bem vindo ao México!</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sct-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <h2>Onde fica o México 🌎</h2>
+                        <p class="lead">
+                            Estados Unidos Mexicanos, é uma república constitucional federal localizada na 
+                            América do Norte. O país é limitado a norte pelos Estados Unidos; ao sul e oeste 
+                            pelo Oceano Pacífico; a sudeste pela Guatemala, Belize e Mar do Caribe; a leste 
+                            pelo Golfo do México. Com um território que abrange quase 2 milhões de quilômetros 
+                            quadrados, o México é o quinto maior país das Américas por área total e o 14.º 
+                            maior país independente do mundo. Com uma população estimada para 2020 de 126 
+                            milhões de habitantes, é o 11.º país mais populoso do mundo e o mais populoso 
+                            país da hispanofonia. O México é uma federação composta por 31 estados e a Cidade 
+                            do México (capital). O México figura também como o segundo país mais populoso 
+                            e segundo em PIB da América Latina, em ambos os casos superado apenas pelo Brasil.
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div id="map" style="width: 100%; height: 500px;"></div> 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sct-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 informacoes">
+                        <h2>⚔️ História do México ⚔️</h2>
+                        <p class="lead">
+                            "Muito antes da chegada dos espanhóis, os astecas, toltecas e os maias ocupavam a 
+                            região que atualmente corresponde ao território do México. O conquistador espanhol 
+                            Hernán Cortés arrasou com a Civilização Asteca entre os anos de 1519 e 1521. A 
+                            partir desse momento, o México passou a integrar o Vice-Reino da Nova Espanha. 
+                            Sua independência foi proclamada em 1810 e, em 1824, já era uma república.
+
+                            Guerra do México, Revolução Mexicana e ditadura
+                            No ano de 1836, ocorreu a independência da região do atual estado norte-americano 
+                            do Texas, e sua anexação pelos Estados Unidos, em 1845, o que resultou na Guerra 
+                            do México. Já derrotado, o México perdeu ainda o Novo México, a Alta Califórnia, 
+                            Utah, Arizona, Nevada e o oeste do Colorado."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-3">
+                        <h4>Alunos</h4>
+                        <ul class="navbar-nav">
+                            <li>Pedro de Freitas</li>
+                            <li>Maxwell</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <h4>Professor</h4>
+                        <ul class="navbar-nav">
+                            <li>Gustavo</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-6 mx">
+                        <img src="./images/bandeira-mexico.jpg" class="img-fluid mx-img" alt="Bandeira do México">
+                    </div>
+                    <div class="col-12">
+                        <h5>&copy; 2023 Dia de los muertos</h5>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <script src="./js/mexico.js"></script>
+        <script src="./Bootstrap/Bootstrap5/js/bootstrap.bundle.min.js"></script>
+        <script src="./Bootstrap/Bootstrap5/js/bootstrap.min.js"></script>
+        <script src="./Bootstrap/Bootstrap5/js/bootstrap.bundle.js"></script>
+        <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>

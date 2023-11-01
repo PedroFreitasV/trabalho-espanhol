@@ -1,0 +1,284 @@
+/****************************** NAVEGAÇÃO *******************************/
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100%;
+}
+.brand{
+    width: 94px;
+}
+nav{
+    background: rgba(0, 0, 0, 0.8)
+}
+nav div.container ul a{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+ul.navbar-nav li.nav-item a.nav-link{
+    color: rgb(255, 255, 255);
+    transition: .5s;
+    position:  relative !important;
+}
+ul.navbar-nav li.nav-item a::after{
+    content: " " !important;
+    width: 0% !important;
+    height: 2px !important;
+    background-color:rgb(255, 255, 255) !important;
+    position: absolute !important;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+ul.navbar-nav li.nav-item a:hover::after{
+    width: 100% !important;
+}
+.divisor{
+    width: 1px;
+    background-color: white;
+    margin: 12px 15px;
+}
+.fa-bars{
+    color: white;
+}
+
+/****************************** SEÇÃO 1 *******************************/
+
+body, html, #sct-1{
+    height: 100%;
+}
+#sct-1{
+    background-image: url(../backgrounds/bg-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    padding-top: 250px;
+}
+#sct-1 h1{
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+.bienvenido{
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+.caveira{
+    width: 150px;
+    text-align: center;
+}
+
+/* ROTATE IMAGE */
+.rotate_01{
+    -webkit-transition: -webkit-transform 1s;
+}
+.rotate_01:hover{
+    -webkit-transform: rotate(360deg) translateZ(0);
+}
+.rotate_02{
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+}
+/* KEYFRAMES */
+@-webkit-keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+@keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+
+/****************************** SEÇÃO 2 *******************************/
+
+#sct-2{
+    padding: 30px;
+    background-color: #1d1c1c;
+    color: white;
+}
+#sct-2 h2{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.img{
+    text-align: center;
+}
+.festa{
+    width: 450px;
+    text-align: center;
+    border: 7px solid gold;
+    border-radius: 15px;
+    margin-top: 7px;
+}
+
+/****************************** SEÇÃO 3 *******************************/
+
+#sct-3{
+    background-image: url(../images/cidade.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    color: #000;
+    padding: 30px;
+}
+.informacoes{
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    padding: 0;
+}
+#sct-3 h3{
+    text-transform: uppercase;
+    padding: 10px;
+}
+#sct-3 p{
+    padding: 10px;
+}
+.linha{
+    width: 100%;
+    text-align: center;
+    border-top: 2px solid #000;
+    margin: 0px;
+    padding: 10px;
+}
+.linha a{
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+/****************************** FOOTER *******************************/
+
+footer{
+    background-color: #1d1c1c;
+    padding: 30px;
+    color: white;
+    text-align: center;
+}
+.mx-img{
+    border: 7px solid rgb(20, 148, 20);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+footer ul, .mx-img{
+    margin-bottom: 10px;
+}
+footer h5{
+    text-align: center;
+    border-top: 2px solid white;
+    margin-top: 10px;
+    padding-top: 20px;
+}
+footer h4{
+    padding-top: 10px;
+}
+
+/***************************** MEDIA *************************/
+/* Extra Small divices */
+@media(max-width: 575.98px){
+    .caveira{
+        display: none;
+    }
+    .caveira-2{
+        width: 150px;
+        text-align: center;
+    }
+    #sct-2{
+        text-align: center;
+        padding: 20px 5px;
+    }
+    #sct-3{
+        background-image: url(../images/cidade.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}
+/* Small devices */
+@media(min-width: 576px) and (max-width: 567.98px){
+    .caveira{
+        display: none;
+    }
+    .caveira-2{
+        width: 150px;
+        text-align: center;
+    }
+    #sct-2{
+        text-align: center;
+        padding: 20px 5px;
+    }
+    #sct-3{
+        background-image: url(../images/cidade.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        padding-top: 2  0px;
+    }
+}
+/* Medium devices*/
+@media(min-width: 568px) and (max-width: 991.98px){
+    .caveira{
+        display: none;
+    }
+    .caveira-2{
+        width: 150px;
+        text-align: center;
+    }
+    body, html, #sct-1{
+        height: 90%;
+    }
+    #sct-2{
+        text-align: center;
+    }
+    .festa{
+        width: 450px;
+        text-align: center;
+        border: 7px solid gold;
+        border-radius: 15px;
+        margin-top: 70px;
+    }
+    #sct-3{
+        background-image: url(../images/cidade.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        padding-top: 80px;
+    }
+    .mx{
+        text-align: center;
+    }
+}
+/* Large devices */
+@media(min-width: 992px) and (max-width: 1199.98px){
+    .caveira-2{
+        display: none;
+    }
+    .mx{
+        text-align: center;
+    }
+}
+/* Extra Large devices */
+@media(min-width: 1200px){
+    .caveira-2{
+        display: none;
+    }
+    .mx{
+        text-align: center;
+    }
+}
